@@ -1,14 +1,14 @@
-// Animação de esconder o cabeçalho ao rolar para baixo
-let lastScrollTop = 0;
+// Esconde o topo com animação ao rolar
 const header = document.getElementById("top-bar");
+let lastScrollTop = 0;
 
-window.addEventListener("scroll", function () {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
 
   if (scrollTop > lastScrollTop) {
-    header.classList.add("hidden"); // anima para cima
+    header.classList.add("hidden");
   } else {
-    header.classList.remove("hidden"); // volta
+    header.classList.remove("hidden");
   }
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
