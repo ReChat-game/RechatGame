@@ -1,4 +1,3 @@
-// Esconde o topo com animação ao rolar
 const header = document.getElementById("top-bar");
 let lastScrollTop = 0;
 
